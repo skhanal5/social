@@ -29,7 +29,7 @@
 
 * {
   padding: 0px;
-  margin: 0px;
+  margin: 0;
 }
 
 ul,
@@ -46,13 +46,14 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: "Roboto";
+  height: 100vh;
 }
 
 input {
-  all:unset;
+  all: unset;
 }
 
-input[type=text] {
+input[type="text"] {
   padding-left: 30px;
 }
 
@@ -91,8 +92,8 @@ input[type=text] {
 }
 
 .topbar-search {
-  line-height:140%;
-  padding:0;
+  line-height: 140%;
+  padding: 0;
   appearance: none;
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
@@ -142,32 +143,71 @@ input[type=text] {
   width: 20px;
 }
 
+.content {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
 .container {
   display: flex;
-  height: 100vh; /* Adjust the height as needed */
-  width: 80%;
-  overflow: hidden;
+  flex-direction: column;
+  align-items: center;
+  padding: 100px;
   border-right: 1px solid var(--border-color);
+  width: 50%;
 }
 
 .sidebar {
-  width: 250px;
-  padding: 20px 0px 20px 0px;
-  border-right: 1px solid var(--border-color);
+  width: 20%;
   display: flex;
   flex-direction: column;
+  padding: 20px 0px 20px 0px;
+  border-right: 1px solid var(--border-color);
   gap: 30px;
+  align-content: center;
+}
+
+.right {
+  width: 20%;
 }
 
 .sidebar-row {
   display: flex;
   flex-direction: row;
   gap: 20px;
-  justify-content: center;
-  align-items: center;
+  margin-left: 70px;
+  align-content: center;
 }
 
 .icon {
   height: 25px;
   width: 25px;
+}
+
+.title {
+  margin-top: 3px;
+}
+
+.post {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 20px;
+  width: 100%;
+}
+
+.post-metadata {
+  margin-left: 10px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.pfp {
+  height: 50px;
+  width: 50px;
+  border-radius: 100%;
 }
