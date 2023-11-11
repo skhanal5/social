@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function PostCell() {
   return (
-    <Link to="/post">
+    <Link style={{ width: "100%", display: 'flex', justifyContent: 'center' }} to="/post">
       <div className="post">
         <img className="pfp" width="50" height="50"></img>
         <div className="post-content">
