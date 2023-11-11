@@ -18,8 +18,8 @@
 }
 
 :root {
-  --main-color: #b5bec6;
-  --main-hover-color: #c3ccd4;
+  --main-color: #ededed;
+  --main-hover-color: #ffffff;
   --bg-color: #0e100e;
   --accent-color: #364652;
   --text-color: #fff;
@@ -101,15 +101,14 @@ input[type="text"] {
   font-size: 14px;
   padding: 10px;
   color: var(--text-color);
-  width: 250px; /* Set a width or adjust as needed */
+  width: 250px;
 }
 
-/* Add some styles for focus state */
+
 .topbar-search:focus {
-  border-color: var(--main-hover-color); /* Change border color on focus */
+  border-color: var(--main-hover-color);
 }
 
-/* Style the placeholder text */
 .topbar-search::placeholder {
   color: #999;
   font-family: "Roboto";
@@ -153,6 +152,7 @@ input[type="text"] {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
   padding: 100px;
   border-right: 1px solid var(--border-color);
   width: 50%;
@@ -252,5 +252,78 @@ input[type="text"] {
 }
 
 .pfp {
+  border: 1px solid var(--border-color);
   border-radius: 50%;
+}
+
+.add-comment {
+  margin-top: 20px;
+  width: 100%;
+  align-self: center;
+}
+
+.comments-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  width: 100%;
+  height: fit-content;
+}
+
+.add-comment-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 30px;
+  width: 100%;
+  height: fit-content;
+}
+
+.add-comment-media {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 100%;
+}
+
+.btn-box {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.send-btn {
+  padding: 10px;
+  width: fit-content;
+  border-radius: 10px;
+  outline: none;
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--main-color);
+}
+
+.send-btn:hover {
+  background-color: var(--main-hover-color);
+}
+
+.comment-box {
+  flex: 1;
+  margin-left: 30px;
+  background-color: var(--bg-color);
+  border:none;
+  font-family: 'Roboto';
+  width: 100%;
+}
+.comment-box:focus {
+  border:none;
+  border-color: none;
 }

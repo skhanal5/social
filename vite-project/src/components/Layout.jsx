@@ -10,6 +10,7 @@ export default function Layout() {
         <div className="content">
           <Sidebar></Sidebar>
           <Outlet />
+          <div className="right"></div>
         </div>
       </main>
     </body>
