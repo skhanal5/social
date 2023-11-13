@@ -2,29 +2,28 @@ import React from "react";
 import PostUtilities from "./PostUtilities";
 import { Link } from "react-router-dom";
 
-export default function PostCell() {
+export default function PostCell({author, username, pfp, timestamp, topic, title, message_preview, upvotes, downvotes}) {
 
   return (
     <Link style={{ width: "100%", display: 'flex', justifyContent: 'center' }}  to="/post">
       <div className="post">
-        <img className="pfp" width="50" height="50"></img>
+        <img className="pfp" src={pfp} width="50" height="50"></img>
         <div className="post-content">
           <div className="post-metadata">
             <span>
-              <strong>Subodh Khanal</strong>
+              <strong>{author}</strong>
             </span>
-            <span>@Username</span>
-            <span>30 mins ago</span>
+            <span>{"@" + username}</span>
+            <span>{timestamp}</span>
           </div>
-          <div className="post-topic-card">Topic</div>
+          <div className="post-topic-card">{topic}</div>
           <div className="post-subject">
-            <div>This is the title of the post.</div>
+            <div>{title}</div>
           </div>
           <div className="post-message">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua...
+           {message_preview}
           </div>
-          <PostUtilities></PostUtilities>
+          <PostUtilities upvotes={upvotes} downvotes={downvotes}></PostUtilities>
         </div>
       </div>
     </Link>

@@ -8,7 +8,8 @@ import {
   TrophyIcon,
   GlobeAmericasIcon,
   CurrencyDollarIcon,
-  RocketLaunchIcon
+  RocketLaunchIcon,
+  PlayCircleIcon
 } from "@heroicons/react/24/outline";
 
 export default function Sidebar() {
@@ -46,6 +47,10 @@ export default function Sidebar() {
       <Link className="sidebar-row" to="/create">
         <CurrencyDollarIcon className="icon"></CurrencyDollarIcon>
         <span className="title">Finance</span>
+      </Link>
+      <Link className="sidebar-row" to="/create">
+        <PlayCircleIcon className="icon"></PlayCircleIcon>
+        <span className="title">Entertainment</span>
       </Link>
     </div>
   );

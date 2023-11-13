@@ -14,16 +14,15 @@ export default function Topbar() {
    * Break off server side and client side
    */
   useEffect(() => {
-    async function fetchData() {
+    async function fetchUser() {
       try {
         const { data, error } = await supabase.from("users").select();
-        console.log(data);
         setUser(data[0]);
       } catch (error) {
         console.error("Error:", error);
       }
     }
-    fetchData();
+    fetchUser();
   }, []);
 
   return (
