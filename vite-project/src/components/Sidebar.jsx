@@ -15,7 +15,7 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <br></br>
-      <Link className="sidebar-row" to="/home">
+      <Link className="sidebar-row" to="/">
         <HomeIcon className="icon"></HomeIcon>
         <span className="title">Home</span>
       </Link>

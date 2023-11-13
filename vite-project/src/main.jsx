@@ -10,7 +10,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <Routes>
       <Route path="/" element={<Layout />}>
-        <Route index={true} path="/home" element={<App/>} />
+        <Route index={true} element={<App/>} />
         <Route index={false} path="/post" element={<PostView/>} />
       </Route>
     </Routes>

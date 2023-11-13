@@ -4,7 +4,7 @@ import Sidebar from "./Sidebar";
 import React from "react";
 export default function Layout() {
   return (
-    <body>
+    <div>
       <Topbar></Topbar>
       <main>
         <div className="content">
@@ -13,6 +13,6 @@ export default function Layout() {
           <div className="right"></div>
         </div>
       </main>
-    </body>
+    </div>
   );
 }
