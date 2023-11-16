@@ -1,32 +1,36 @@
 import React from "react";
 import PostUtilities from "./PostUtilities";
+import TopicCard from "./TopicCard";
 
-export default function PostContent() {
+// delete this later cuase this is just a repeat of PostCell
+export default function PostContent({
+  author,
+  username,
+  pfp,
+  timestamp,
+  topic,
+  title,
+  message,
+  upvotes,
+  downvotes
+}) {
   return (
     <div className="post">
-      <img className="pfp" width="50" height="50"></img>
+      <img className="pfp" src={pfp} width="50" height="50"></img>
       <div className="post-content">
         <div className="post-metadata">
           <span>
-            <strong>Subodh Khanal</strong>
+            <strong>{author}</strong>
           </span>
-          <span>@Username</span>
-          <span>30 mins ago</span>
+          <span>{"@" + username}</span>
+          <span>{timestamp}</span>
         </div>
-        <div className="post-topic-card">Topic</div>
+        <TopicCard topic={topic}></TopicCard>
         <div className="post-subject">
-          <div>This is the title of the post.</div>
+          <div>{title}</div>
         </div>
-        <div className="post-message">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborumƒ
-        </div>
-        <PostUtilities></PostUtilities>
+        <div className="post-message">{message}</div>
+        <PostUtilities upvotes={upvotes} downvotes={downvotes}></PostUtilities>
       </div>
     </div>
   );
