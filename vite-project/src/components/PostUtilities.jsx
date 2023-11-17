@@ -4,6 +4,7 @@ import {
 } from "@heroicons/react/24/outline";
 import React from "react";
 export default function PostUtilities({upvotes, downvotes}) {
+
   return (
     <div className="post-utils">
       <div className="post-util">

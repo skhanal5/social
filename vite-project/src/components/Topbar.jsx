@@ -4,10 +4,15 @@ import {
   PlusCircleIcon,
 } from "@heroicons/react/24/outline";
 import { supabase } from "../client.js";
-export default function Topbar() {
+export default function Topbar({setQuery}) {
   const [user, setUser] = useState(null);
+  
+  const handleSearch = (e) => {
+    setQuery(e.target.value)
+  }
 
   /**
+   * This should be lifted into App
    * hack way of handling retrieving current user's information
    * - handle sessions later..
    * current implementation: just grab "my user"
@@ -35,6 +40,7 @@ export default function Topbar() {
             className="topbar-search"
             type="text"
             placeholder="Search Topics..."
+            onChange={handleSearch}
           ></input>
         </div>
         <div className="topbar-btn">
