@@ -71,6 +71,12 @@ export default function App() {
             .eq("uuid", post.author_uuid);
           post["author"] = data[0];
         }
+        data.sort((a, b) => {
+          const dateA = new Date(a.created_at).getTime();
+          const dateB = new Date(b.created_at).getTime();
+          
+          return dateB - dateA;
+        });
         setPosts(data);
       } catch (error) {
         console.error("Error:", error);

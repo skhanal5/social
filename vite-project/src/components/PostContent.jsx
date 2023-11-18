@@ -78,7 +78,12 @@ export default function PostContent({
           <div>{title}</div>
         </div>
         <div>
-          <img className="post-img" src={img}></img>
+          {
+            img ? 
+            <img className="post-img" src={img}></img>
+            :
+            <></>
+          }
         </div>
         {editing ? (
           <div>
