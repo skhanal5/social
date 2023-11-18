@@ -3,7 +3,7 @@
 ## About
 Social media application for CodePath's WEB102. Makes use of React for the frontend and Supabase on the backend as of so far. Current implementation works for one user. 
 
-## Required Features
+## Features
 
 - [X] **A create form that allows the user to create posts**
 - [X] **Posts have a title and optionally additional textual content and/or an image added as an external image URL**
@@ -18,11 +18,7 @@ Social media application for CodePath's WEB102. Makes use of React for the front
 - [X] **A previously created post can be edited or deleted from its post page**
 
 ## Video Walkthrough
-
-
 https://github.com/skhanal5/topics/assets/74752121/50ca940b-ca89-4442-98f3-36b60e2e94e9
-
-
 
 ## Todo
 * Splitting off server side and client side
