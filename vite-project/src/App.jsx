@@ -5,14 +5,14 @@ import { supabase } from "./client";
 import { useOutletContext } from "react-router-dom";
 
 export default function App() {
-  const [posts, setPosts] = useState([]);
   const obj = useOutletContext();
-  let filteredPosts = posts
-  ? posts.filter((item) =>
-      item.title.toLowerCase().includes(obj[0].toLowerCase())
-    )
-  : [];
+  const [posts, setPosts] = useState([]);
 
+  let filteredPosts = posts
+    ? posts.filter((item) =>
+        item.title.toLowerCase().includes(obj[0].toLowerCase())
+      )
+    : [];
 
   // splices contents of post if it is too long
   const splicePost = (post_contents) => {
@@ -27,7 +27,6 @@ export default function App() {
     let timestamp = new Date(post_timestamp);
     let now = new Date();
     const elapsedTime = now.getTime() - timestamp.getTime();
-    console.log(post_timestamp);
     const seconds = Math.floor(elapsedTime / 1000);
     const minutes = Math.floor(seconds / 60);
     const hours = Math.floor(minutes / 60);
@@ -38,6 +37,21 @@ export default function App() {
       return hours + " hours ago";
     } else {
       return minutes + " minutes ago";
+    }
+  };
+
+  const handleSort = (e) => {
+    if (e.target.value == "Popular") {
+      filteredPosts.sort((a, b) => parseInt(b.upvotes, 10) - parseInt(a.upvotes, 10));
+      setPosts(filteredPosts)
+    } else {
+      filteredPosts.sort((a, b) => {
+        const dateA = new Date(a.created_at).getTime();
+        const dateB = new Date(b.created_at).getTime();
+        
+        return dateB - dateA;
+      });
+      setPosts(filteredPosts)
     }
   };
 
@@ -67,18 +81,32 @@ export default function App() {
 
   return (
     <div className="container">
+      <div className="filter-buttons">
+        <select
+          className="btn"
+          onChange={handleSort}
+          name="filter"
+          id="filter"
+        >
+          <option value="Recent">Recent</option>
+          <option value="Popular">Popular</option>
+        </select>
+      </div>
       {posts ? (
-        <div>
+        <div className="check">
           {filteredPosts.map((post) => (
             <PostCell
-              key={post.author_uuid}
+              key={post.post_id}
+              id={post.post_id}
               author={post.author.name}
+              author_id={post.author_uuid}
               username={post.author.username}
               pfp={post.author.pfp}
               timestamp={normalizeDate(post.created_at)}
               topic={post.topic}
               title={post.title}
               message={post.post_contents}
+              img={post.media}
               message_preview={splicePost(post.post_contents)}
               upvotes={post.upvotes}
               downvotes={post.downvotes}

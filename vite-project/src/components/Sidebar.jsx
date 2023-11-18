@@ -20,38 +20,38 @@ export default function Sidebar() {
         <HomeIcon className="icon"></HomeIcon>
         <span className="title">Home</span>
       </Link>
-      <Link className="sidebar-row" to="/gallery">
+      <div className="sidebar-row">
         <GlobeAmericasIcon className="icon"></GlobeAmericasIcon>
         <span className="title">World News</span>
-      </Link>
-      <Link className="sidebar-row" to="/gallery">
+      </div>
+      <div className="sidebar-row">
         <TrophyIcon className="icon"></TrophyIcon>
         <span className="title">Sports</span>
-      </Link>
-      <Link className="sidebar-row" to="/gallery">
+      </div>
+      <div className="sidebar-row">
         <MusicalNoteIcon className="icon"></MusicalNoteIcon>
         <span className="title">Music</span>
-      </Link>
-      <Link className="sidebar-row" to="/create">
+      </div>
+      <div className="sidebar-row">
         <NewspaperIcon className="icon"></NewspaperIcon>
         <span className="title">Politics</span>
-      </Link>
-      <Link className="sidebar-row" to="/create">
+      </div>
+      <div className="sidebar-row">
         <RocketLaunchIcon className="icon"></RocketLaunchIcon>
         <span className="title">Gaming</span>
-      </Link>
-      <Link className="sidebar-row" to="/create">
+      </div>
+      <div className="sidebar-row">
         <ShoppingBagIcon className="icon"></ShoppingBagIcon>
         <span className="title">Fashion</span>
-      </Link>
-      <Link className="sidebar-row" to="/create">
+      </div>
+      <div className="sidebar-row">
         <CurrencyDollarIcon className="icon"></CurrencyDollarIcon>
-        <span className="title">Finance</span>
-      </Link>
-      <Link className="sidebar-row" to="/create">
+        <span className="title">Economy</span>
+      </div>
+      <div className="sidebar-row">
         <PlayCircleIcon className="icon"></PlayCircleIcon>
         <span className="title">Entertainment</span>
-      </Link>
+      </div>
     </div>
   );
 }

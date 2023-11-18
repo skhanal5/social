@@ -1,34 +1,13 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   MagnifyingGlassIcon,
   PlusCircleIcon,
 } from "@heroicons/react/24/outline";
-import { supabase } from "../client.js";
-export default function Topbar({setQuery}) {
-  const [user, setUser] = useState(null);
-  
+import { Link } from "react-router-dom";
+export default function Topbar({ setQuery, user}) {
   const handleSearch = (e) => {
-    setQuery(e.target.value)
-  }
-
-  /**
-   * This should be lifted into App
-   * hack way of handling retrieving current user's information
-   * - handle sessions later..
-   * current implementation: just grab "my user"
-   * Break off server side and client side
-   */
-  useEffect(() => {
-    async function fetchUser() {
-      try {
-        const { data, error } = await supabase.from("users").select();
-        setUser(data[0]);
-      } catch (error) {
-        console.error("Error:", error);
-      }
-    }
-    fetchUser();
-  }, []);
+    setQuery(e.target.value);
+  };
 
   return (
     <div className="topbar">
@@ -43,23 +22,23 @@ export default function Topbar({setQuery}) {
             onChange={handleSearch}
           ></input>
         </div>
-        <div className="topbar-btn">
-          <PlusCircleIcon className="topbar-icon"></PlusCircleIcon>
-          <span>Post</span>
-        </div>
+        <Link
+          to={`/post`}
+          state={{
+            user
+          }}
+        >
+          <div className="topbar-btn">
+            <PlusCircleIcon className="topbar-icon"></PlusCircleIcon>
+            <span>Post</span>
+          </div>
+        </Link>
       </div>
 
-      {user ? (
-        <div className="topbar-btn">
-          <img src={user.pfp} className="topbar-icon"></img>
-          <div>{user.name}</div>
-        </div>
-      ) : (
-        <div className="topbar-btn">
-          <img className="topbar-icon"></img>
-          <div>Username</div>
-        </div>
-      )}
+      <div className="topbar-btn">
+        <img src={user.pfp} className="topbar-icon"></img>
+        <div>{user.name}</div>
+      </div>
     </div>
   );
 }

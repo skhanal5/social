@@ -4,29 +4,38 @@ import { Link } from "react-router-dom";
 import TopicCard from "./TopicCard";
 
 export default function PostCell({
+  id,
   author,
+  author_id,
   username,
   pfp,
   timestamp,
   topic,
   title,
   message,
+  img,
   message_preview,
   upvotes,
   downvotes,
 }) {
+
   return (
+
+    //terrible approach to the URL's
     <Link
       style={{ width: "100%", display: "flex", justifyContent: "center" }}
-      to="/post"
+      to={`/topic/${id}`}
       state={{
+        id,
         author,
+        author_id,
         username,
         pfp,
         timestamp,
         topic,
         title,
         message,
+        img,
         upvotes,
         downvotes,
       }}
@@ -47,6 +56,7 @@ export default function PostCell({
           </div>
           <div className="post-message">{message_preview}</div>
           <PostUtilities
+            post_id={id}
             upvotes={upvotes}
             downvotes={downvotes}
           ></PostUtilities>

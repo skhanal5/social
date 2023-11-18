@@ -5,21 +5,21 @@ export default function TopicCard({topic}) {
     const getColor = () => {
         let category = topic
         if (category === "World News") {
-            return "#e63c3c"
+            return "#fc0303"
         } else if (category == "Sports") {
-            return "#ffbe4f"
+            return "#fff263"
         } else if (category == "Music") {
-            return "#5056fa"
+            return "#5643fa"
         } else if (category == "Politics") {
-            return "#1542d6"
+            return "#1cacff"
         } else if (category == "Gaming") {
-            return "#616ded"
+            return "#bdeaff"
         } else if (category == "Fashion") {
             return "#ed61e4"
         } else if (category == "Economy") {
             return "#73ff69"
         } else if (category == "Entertainment") {
-            return "#d0d615"
+            return "#fcca03"
         }
     }
 
