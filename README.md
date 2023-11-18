@@ -23,6 +23,8 @@ https://github.com/skhanal5/topics/assets/74752121/50ca940b-ca89-4442-98f3-36b60
 ## Todo
 * Splitting off server side and client side
 * Handling authentication and sessions
-  * Redesigning app for multiple users in mind
-* Fixing DB schema
-* Expanding this further
+* Handling Security
+* User profiles
+* Followers/Following
+* Redux
+* Native Image Support
