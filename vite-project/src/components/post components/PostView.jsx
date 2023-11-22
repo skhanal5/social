@@ -3,7 +3,7 @@ import PostContent from "./PostContent";
 import PostComments from "./PostComments";
 import AddComment from "./AddComment";
 import { useLocation, useOutletContext } from "react-router-dom";
-import { supabase } from "../../client";
+import { supabase } from "../../../client";
 
 export default function PostView() {
   let { state } = useLocation();

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { supabase } from "../../client";
+import { supabase } from "../../../client";
 
 // update this to show authenticated user's information rather than this prop stuff
 export default function AddComment({ user, post_id, comments, setComments}) {

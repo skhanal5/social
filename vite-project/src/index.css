@@ -20,10 +20,12 @@
 :root {
   --main-color: #ededed;
   --main-hover-color: #ffffff;
-  --bg-color: #0e100e;
+  --bg-color: #030303;
+  --card-color: #111316;
   --accent-color: #364652;
   --text-color: #fff;
-  --border-color: #3c3c3c;
+  --border-color: #53555f74;
+  --alt-border-color: #31353d;
   --text-dimmed-color: #999;
 }
 
@@ -207,6 +209,7 @@ input[type="text"] {
   padding: 30px;
   width: 100%;
   height: fit-content;
+  background-color: var(--card-color);
 }
 
 .post-content {
@@ -253,6 +256,10 @@ input[type="text"] {
 }
 
 .post-utils {
+  background-color: var(--bg-color);
+  padding: 7px;
+  width: fit-content;
+  border-radius: 10px;
   margin-top: 10px;
   display: flex;
   flex-direction: row;
@@ -280,7 +287,8 @@ input[type="text"] {
   font-size: 12px;
 }
 
-.post-topic-card {
+.topic-card {
+  background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   border-radius: 10px;
   padding: 5px 10px 5px 10px;
@@ -290,7 +298,7 @@ input[type="text"] {
 }
 
 .pfp {
-  border: 1px solid var(--border-color);
+  border: .09rem solid var(--alt-border-color);
   border-radius: 50%;
 }
 

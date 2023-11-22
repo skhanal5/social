@@ -3,7 +3,7 @@ import {
   ArrowDownCircleIcon,
 } from "@heroicons/react/24/outline";
 import React, { useState } from "react";
-import { supabase } from "../../client";
+import { supabase } from "../../../client";
 
 
 // on refresh the logic for getting upvotes/downvotes doesn't work

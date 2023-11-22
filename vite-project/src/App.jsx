@@ -1,6 +1,6 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
-import PostCell from "./components/PostCell";
+import PostCell from "./components/post components/PostCell";
 import { supabase } from "../client";
 import { useOutletContext } from "react-router-dom";
 

@@ -24,7 +24,7 @@ export default function TopicCard({topic}) {
     }
 
     return (
-        <div className="post-topic-card" style={{color: getColor()}}>
+        <div className="topic-card" style={{color: getColor()}}>
             {topic}
         </div>
     )

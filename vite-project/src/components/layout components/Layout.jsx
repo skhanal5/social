@@ -2,7 +2,7 @@ import { Outlet } from "react-router-dom";
 import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
 import React, { useEffect, useState } from "react";
-import { supabase } from "../../client";
+import { supabase } from "../../../client";
 export default function Layout() {
   const [query, setQuery] = useState("");
   const [user, setUser] = useState(null);
