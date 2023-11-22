@@ -1,7 +1,7 @@
 import "./App.css";
 import React, { useEffect, useState } from "react";
 import PostCell from "./components/PostCell";
-import { supabase } from "./client";
+import { supabase } from "../client";
 import { useOutletContext } from "react-router-dom";
 
 export default function App() {
@@ -41,6 +41,7 @@ export default function App() {
   };
 
   const handleSort = (e) => {
+    obj[0] = ""
     if (e.target.value == "Popular") {
       filteredPosts.sort((a, b) => parseInt(b.upvotes, 10) - parseInt(a.upvotes, 10));
       setPosts(filteredPosts)

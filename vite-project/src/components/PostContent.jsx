@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import PostUtilities from "./PostUtilities";
 import TopicCard from "./TopicCard";
 import { TrashIcon, PencilSquareIcon } from "@heroicons/react/24/outline";
-import { supabase } from "../client";
+import { supabase } from "../../client";
 // delete this later cuase this is just a repeat of PostCell
 export default function PostContent({
   id,

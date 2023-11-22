@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { supabase } from "../client";
+import { supabase } from "../../client";
 import { useLocation } from "react-router-dom";
 import { PhotoIcon, PencilIcon } from "@heroicons/react/24/outline";
 
