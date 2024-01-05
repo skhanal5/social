@@ -1,6 +1,8 @@
-# Topics
+<p align="center" >
+  <img src="https://github.com/skhanal5/topics/assets/74752121/ea051ac0-8e6c-431f-9622-0b8a731e26ff" width=300></img>
+</p>
 
-## About
+## Topics
 Social media application for CodePath's WEB102. Makes use of React for the frontend and Supabase on the backend as of so far. Current implementation works for one user. 
 
 ## Features
