@@ -3,7 +3,7 @@
 </p>
 
 ## Topics
-Social media application for CodePath's WEB102. Makes use of React for the frontend and Supabase on the backend as of so far. Current implementation works for one user. 
+Social media application. Makes use of React for the frontend and Supabase on the backend as of so far. Current implementation works for one user. 
 
 ## Features
 
