@@ -21,12 +21,3 @@ Social media application. Makes use of React for the frontend and Supabase on th
 
 ## Video Walkthrough
 https://github.com/skhanal5/topics/assets/74752121/50ca940b-ca89-4442-98f3-36b60e2e94e9
-
-## Todo
-* Splitting off server side and client side
-* Handling authentication and sessions
-* Handling security
-* Redux, Global Context, Lifting State
-* User profiles, followers/following
-* Native Image Support
-* UI Overhaul
